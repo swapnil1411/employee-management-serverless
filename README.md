@@ -1,94 +1,88 @@
-# Getting Started with Create React App
+echo "# 🚀 Employee Management System - Serverless
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Live Application
-
-The application is hosted on **AWS Amplify**:  
-🔗 [Live Link](https://main.d2wffsq4euqihi.amplifyapp.com/)
-
-### Test Accounts
-
-Use the following credentials to test the app:
-
-- **Admin**  
-  - Email: `admin@gmail.com`  
-  - Password: `admin password`
-
-- **HR**  
-  - Email: `hr@gmail.com`  
-  - Password: `adminhr password`
+A **scalable, serverless Employee Management System** built using **AWS Lambda, SNS, DynamoDB, and AppSync**.  
+This system ensures seamless employee management with **role-based access control (RBAC)**.
 
 ---
 
-## Available Scripts
+## 🌟 Features
+### 🔹 **Admin**
+- Create and manage employee records
+- Assign roles (**HR, Employee**)
+- Manage system-wide access
 
-In the project directory, you can run:
+### 🔹 **HR**
+- Update employee details
+- View employee records
 
-### `npm start`
+### 🔹 **Employee**
+- View personal profile and employment details
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏗️ Tech Stack
+| Technology  | Purpose |
+|------------|---------|
+| **AWS Lambda** | Serverless backend execution |
+| **AWS SNS** | Event-driven messaging |
+| **AWS DynamoDB** | NoSQL database for storage |
+| **AWS AppSync (GraphQL API)** | Efficient data fetching |
+| **React** | Interactive frontend UI |
+| **Node.js** | Backend API logic |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Quick Start
 
-### `npm run build`
+### **1️⃣ Clone the Repository**
+\`\`\`sh
+git clone https://github.com/swapnil1411/employee-management-system-serverless.git
+cd employee-management-system-serverless
+\`\`\`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **2️⃣ Install Dependencies**
+For the backend:
+\`\`\`sh
+cd backend
+npm install
+\`\`\`
+For the frontend:
+\`\`\`sh
+cd frontend
+npm install
+\`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **3️⃣ Deploy to AWS**
+Using AWS SAM CLI:
+\`\`\`sh
+sam build
+sam deploy --guided
+\`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🌍 Live Demo & Documentation
+🔗 **Live Server:** [Employee Management System](https://main.d2wffsq4euqihi.amplifyapp.com/)  
+📜 **API Documentation:** [Coming Soon]  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧑‍💻 Test Credentials
+Use the following test accounts to log in:  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Role  | Email | Password |
+|-------|----------------|----------|
+| **Admin** | admin@gmail.com | admin |
+| **HR** | HR@gmail.com | adminhr |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Deployment
+## 🤝 Contributing
+Contributions are welcome! Feel free to submit pull requests or report issues.
 
-The application is currently deployed on **AWS Amplify**.
+---
 
-### How to Deploy (Coming Soon)
-
-Steps to deploy this application to AWS Amplify will be added soon.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+## 🛠️ Author
+👤 **Swapnil**  
+📧 Contact: [swapnil@example.com](mailto:swapnil@example.com)
+" > README.md
