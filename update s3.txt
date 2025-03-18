@@ -1,0 +1,27 @@
+zip -r aws-sns.zip .  
+
+aws s3 cp aws-sns.zip s3://kaka-123-dholu --no-verify-ssl 
+
+aws lambda update-function-code \                            
+  --function-name EmployeeQueries \
+  --s3-bucket kaka-123-dholu \
+  --s3-key aws-response.zip \
+  --no-verify-ssl
+
+
+  aws sns publish \                                            
+  --topic-arn arn:aws:sns:us-east-1:879381256023:EmployeeSNS \
+  --message '{
+    "default": "{\"method\": \"POST\", \"graphqlQuery\": \"query { getEmployees(limitValue: 5, offset: 0) { _id userId FirstName LastName Age Title Department EmployeeType DateOfJoining } }\", \"variables\": { \"limitValue\": 5, \"offset\": 0 }, \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NkYTcxN2M1NTBhNDEyMzRmYWM1MGUiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc0MjIyOTYzMiwiZXhwIjoxNzQyMjMzMjMyfQ.jxtIfIrd3es3laBQsLFmd5sacicj6MYAa-NWgfIgkCc\"}"
+  }' \
+  --no-verify-ssl \
+  --region us-east-1 \
+  --message-structure "json"
+
+
+  aws dynamodb get-item \                                    
+  --table-name EmployeeResponses \
+  --key '{"requestId": {"S": "e3a5c789-1f2b-4d6e-91c8-5d3f7a4b9e12"}}' \
+  --region us-east-1 \
+  --no-verify-ssl
+
